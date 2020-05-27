@@ -1,12 +1,13 @@
 <script>
+	import { Router } from '@sveltech/routify';
+	import { routes } from '@sveltech/routify/tmp/routes';
+
 	import fetch from 'node-fetch';
 	import { ApolloClient } from 'apollo-client';
 	import { createHttpLink } from 'apollo-link-http';
 	import { setContext } from 'apollo-link-context';
 	import { InMemoryCache } from 'apollo-cache-inmemory';
-
-	import { Router } from '@sveltech/routify';
-	import { routes } from '@sveltech/routify/tmp/routes';
+	import { setClient } from 'svelte-apollo';
 
 	const httpLink = new createHttpLink({
 		uri: 'https://ant-venom.myshopify.com/api/graphql',
