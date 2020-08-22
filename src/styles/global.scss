@@ -1,0 +1,291 @@
+// global.scss
+@import "../theme.scss";
+
+:root {
+	--color-primary-high: hsl(52, 100%, 75%);
+	--color-primary-middle: hsl(48, 100%, 50%);
+	--color-primary-low: hsl(46, 100%, 25%);
+	--color-primary-mask: hsla(48, 100%, 50%, 0.2);
+
+	--color-content-high: hsl(200, 8%, 100%);
+	--color-content-middle: hsl(200, 8%, 68%);
+	--color-content-low: hsl(200, 8%, 56%);
+
+	--color-level-higher: hsl(200, 8%, 40%);
+	--color-level-high: hsl(200, 8%, 24%);
+	--color-level-middle: hsl(200, 8%, 16%);
+	--color-level-low: hsl(200, 8%, 12%);
+	--color-level-lower: hsl(200, 8%, 6%);
+	--color-level-bottom: hsl(200, 8%, 2%);
+	--color-level-mask: hsla(200, 8%, 2%, 0.4);
+
+	--container-main: 120rem;
+	--container-content: 88rem;
+
+	--container-gutter: 0.8rem;
+
+	--size-xxs: 0.4rem;
+	--size-xs: 0.8rem;
+	--size-s: 1.6rem;
+	--size-m: 2.4rem;
+	--size-l: 4rem;
+	--size-xl: 8rem;
+	--size-xxl: 16rem;
+
+	--radius-small: var(--size-xxs);
+	--radius-medium: var(--size-s);
+	--radius-large: var(--size-l);
+
+	--transition-primary: cubic-bezier(0, 1, 0.25, 1); // Punchy
+	--transition-secondary: cubic-bezier(0.5, 2, 0.5, 0.75); // Bouncy
+
+	--font-weight-regular: 400;
+	--font-weight-bold: 800;
+}
+
+html {
+	//font-size: 62.5% !important;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-size-adjust: 100%;
+	-webkit-tap-highlight-color: transparent;
+	@media (max-width: 600) {
+		font-size: 56% !important;
+	}
+}
+
+body {
+	font-family: Helvetica, Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI",
+		Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+	font-style: normal;
+	@include Content;
+	background-color: var(--color-level-bottom);
+	.alt-font {
+		@include AltFont;
+	}
+}
+a {
+	display: inline-block;
+	text-decoration: none;
+	cursor: pointer;
+	color: var(--color-theme-middle);
+	transition: color 0.16s ease-out;
+
+	&:hover,
+	&:focus {
+		color: var(--color-theme-high);
+	}
+}
+
+h1,
+.txt-hero {
+	@include Hero;
+}
+h2,
+.txt-title {
+	@include Title;
+}
+h3,
+.txt-subtitle {
+	@include Subtitle;
+}
+h4,
+h5,
+.txt-heading {
+	@include Heading;
+}
+h6,
+.txt-label {
+	@include Label;
+}
+p,
+ol,
+ul,
+blockquote,
+input,
+select,
+textarea,
+.txt-content {
+	@include Content;
+}
+
+img.icon {
+	height: 1.25em;
+	width: auto;
+	display: inline-block;
+}
+
+blockquote {
+	padding: var(--size-s);
+	background-color: var(--color-level-lower);
+	border: 1px solid var(--color-level-low);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	&:first-child {
+		margin-top: 0;
+	}
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	&.alt-font {
+		@include AltFont;
+	}
+
+	svg {
+		font-size: 1.25em;
+		margin: auto 0;
+	}
+
+	strong,
+	b {
+		font-weight: bolder;
+	}
+
+	sub,
+	sup,
+	small {
+		//. Specified in % so that the sup/sup is the right size relative to the surrounding text
+		font-size: 75%;
+
+		// Zero out the line-height so that it doesn't interfere with the positioning that follows */
+		line-height: 0;
+
+		// Where the magic happens: makes all browsers position the sup/sup properly, relative to the surrounding text */
+		position: relative;
+
+		// Note that if you're using Eric Meyer's reset.css, this is already set and you can remove this rule
+		vertical-align: baseline;
+	}
+	sub {
+		// Move the subscripted text down, but only half as far down as the superscript moved up
+		bottom: -0.25em;
+	}
+	sup {
+		// Move the superscripted text up
+		top: -0.5em;
+	}
+	small {
+		font-size: 85%;
+	}
+
+	mark {
+		display: inline;
+		color: var(--color-theme-high);
+		background-color: var(--color-theme-mask);
+		padding: 0 var(--size-xxs);
+		border-radius: var(--radius-small);
+	}
+	code {
+		font-style: italic;
+		color: var(--color-content-high);
+		background-color: var(--color-level-low);
+		padding: 0 0.2em;
+		font-size: 0.8em;
+		line-height: 1em;
+		padding: 0.3em;
+		border-radius: 0.25em;
+		font-weight: bolder;
+	}
+
+	em {
+		font-style: italic;
+		font-style: oblique;
+	}
+	u {
+		text-decoration: underline;
+	}
+	i {
+		font-style: italic;
+	}
+}
+
+.svg-icon {
+	width: 1em;
+	height: 1em;
+
+	display: inline-block;
+	fill: currentColor;
+}
+
+.blocks__container {
+	padding: var(--size-xxs);
+	@media (max-width: $phone_large) {
+		padding: var(--size-xs);
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p,
+	blockquote,
+	ul,
+	ol,
+	.RICHTEXT__CONSTRAINED {
+		max-width: 880px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		text-transform: capitalize;
+		margin-top: 0.66em;
+		margin-bottom: 0.66em;
+	}
+	p {
+		margin-top: 1em;
+		margin-bottom: 1em;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p {
+		&:first-child {
+			margin-top: 0;
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	/* ulli),
+	olli){
+		list-style-position: inside;
+	} */
+
+	ol,
+	li {
+		list-style: decimal;
+		list-style-position: inside;
+	}
+
+	ul,
+	li {
+		list-style: disc;
+		list-style-position: inside;
+	}
+
+	a {
+		display: inline;
+		text-decoration: underline;
+	}
+}
