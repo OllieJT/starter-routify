@@ -1,17 +1,17 @@
 <script>
-  export let id;
-  import { url } from "@sveltech/routify";
+	export let id;
+	import { url } from "@sveltech/routify";
 </script>
 
 <style>
-  a {
-    font-size: 1.5em;
-    padding: 12px 24px;
-  }
+	a {
+		font-size: 1.5em;
+		padding: 12px 24px;
+	}
 </style>
 
 <div class="card" style="width: 512px;">
-  <h1>{id}</h1>
+	<h1>{id}</h1>
 </div>
 
 <br />
