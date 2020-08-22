@@ -2,3 +2,8 @@
 /dist/
 .DS_Store
 **/.history
+/src/tmp/
+.routify
+.netlify
+*.Identifier
+src/pages/example/*
