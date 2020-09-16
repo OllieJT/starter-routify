@@ -1,5 +1,4 @@
 // global.scss
-@import "../theme.scss";
 
 :root {
 	--color-primary-high: hsl(52, 100%, 75%);
@@ -59,7 +58,8 @@ body {
 		Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 	font-style: normal;
 	@include Content;
-	background-color: var(--color-level-bottom);
+	background-color: rgb(200, 200, 200);
+
 	.alt-font {
 		@include AltFont;
 	}
@@ -217,7 +217,7 @@ p {
 
 .blocks__container {
 	padding: var(--size-xxs);
-	@media (max-width: $phone_large) {
+	@media (max-width: 600px) {
 		padding: var(--size-xs);
 	}
 

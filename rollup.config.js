@@ -1,25 +1,31 @@
-import { createRollupConfigs } from './scripts/base.config.js'
-
-const preprocess = require('./svelte.config.js');
+import { createRollupConfigs } from "./scripts/base.config.js";
+const autoPreprocess = require("svelte-preprocess");
+const autoprefixer = require("autoprefixer");
+const postcssImport = require("postcss-import");
 
 const production = !process.env.ROLLUP_WATCH;
 
 export const config = {
-  staticDir: 'static',
-  distDir: 'dist',
-  buildDir: `dist/build`,
-  serve: !production,
-  production,
-  rollupWrapper: rollup => rollup,
-  svelteWrapper: svelte => {
-    svelte.preprocess = [preprocess]
-  },
-  swWrapper: worker => worker,
-}
+	staticDir: "static",
+	distDir: "dist",
+	buildDir: `dist/build`,
+	serve: !production,
+	production,
+	rollupWrapper: (rollup) => rollup,
+	svelteWrapper: (svelte) => {
+		svelte.preprocess = [
+			autoPreprocess({
+				postcss: { plugins: [postcssImport(), autoprefixer()] },
+				defaults: { style: "postcss" }
+			})
+		];
+	},
+	swWrapper: (worker) => worker
+};
 
-const configs = createRollupConfigs(config)
+const configs = createRollupConfigs(config);
 
-export default configs
+export default configs;
 
 /**
   Wrappers can either mutate or return a config
