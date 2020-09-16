@@ -1,4 +1,4 @@
-# routify-starter
+# olliejt-starter-routify
 
 A Svelte project using [Routify](https://github.com/sveltech/routify) to manage routes, SSR, Service Worker and more...
 
@@ -7,6 +7,10 @@ A Svelte project using [Routify](https://github.com/sveltech/routify) to manage 
 Project lead dev: Ollie Taylor ([OllieJT](https://github.com/OllieJT)) ==> [contact@olliejt.com](mailto:contact@olliejt.com)
 
 ## Get started
+
+```zsh
+npx degit github:OllieJT/olliejt-starter-routify YOUR_PROJECT_NAME
+```
 
 ### npm scripts
 
