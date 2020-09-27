@@ -1,8 +1,8 @@
-<script>
+<script lang="ts">
 	import { url } from "@sveltech/routify";
 </script>
 
-<style>
+<style lang="scss">
 	.huge {
 		font-size: 12rem;
 	}

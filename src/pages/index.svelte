@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { metatags } from "@sveltech/routify";
 	metatags.title = "Dignitas";
 	metatags.description = "Description coming soon...";
