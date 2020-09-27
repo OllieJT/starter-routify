@@ -1,126 +1,383 @@
 <script lang="ts">
 	import { metatags } from "@sveltech/routify";
-	metatags.title = "Dignitas";
-	metatags.description = "Description coming soon...";
+	metatags.title = "HTML5 Kitchen Sink";
 </script>
 
-<article>
-	<h1>
-		DIGNITAS AND VIE.GG EXPAND EXISTING PARTNERSHIP WITH A FOCUS ON THE NEW JERSEY
-		MARKETPLACE
-	</h1>
-	<h3>CS:GO TEAM WILL COMPETE AS DIGNITASVIE IN OFFICIAL EVENTS</h3>
+<!-- HTML5 Kitchen sink by @dbox -->
+<main id="top">
+	<section>
+		<hgroup>
+			<h1>h1 HTML5 Kitchen Sink</h1>
+			<h2>h2 Back in my quaint <a href="#top">garden</a></h2>
+			<h3>h3 Jaunty <a href="#top">zinnias</a> vie with flaunting phlox</h3>
+			<h4>h4 Five or six big jet planes zoomed quickly by the new tower.</h4>
+			<h5>
+				h5 Expect skilled signwriters to use many jazzy, quaint old alphabets
+				effectively.
+			</h5>
+			<h6>h6 Pack my box with five dozen liquor jugs.</h6>
+		</hgroup>
+	</section>
+	<hr />
+	<section>
+		<header>
+			<nav>
+				<ul>
+					<li><a href="#top">Home</a></li>
+					<li><a href="#top">About</a></li>
+					<li><a href="#top">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+		<article>
+			<p>
+				This paragraph is nested inside an article. It contains many different,
+				sometimes useful, <a href="https://www.w3schools.com/tags/">HTML5 tags</a>.
+				Of course there are classics like <em>emphasis</em>, <strong
+				>strong</strong>, and <small>small</small> but there are many others as well.
+				Hover the following text for abbreviation tag: <abbr
+					title="abbreviation"
+				>abbr</abbr>. Similarly, you can use acronym tag like this:
+				<acronym title="For The Win">ftw</acronym>. You can define <del>deleted
+					text</del> which often gets replaced with <ins>inserted</ins> text.
+			</p>
+			<p>
+				You can also use <kbd>keyboard text</kbd>, which sometimes is styled
+				similarly to the <code>&lt;code&gt;</code> or <samp>samp</samp> tags. Even
+				more specifically, there is a tag just for <var>variables</var>. Not to
+				be mistaken with blockquotes below, the quote tag lets you denote
+				something as <q>quoted text</q>. Lastly don't forget the sub (H<sub
+				>2</sub>O) and sup (E = MC<sup>2</sup>) tags.
+			</p>
+		</article>
+		<aside>This is an aside.</aside>
+		<footer>This is footer for this section</footer>
+	</section>
+	<hr />
+	<section>
+		<blockquote>
+			<p>
+				Blockquote: I quickly explained that many big jobs involve few hazards
+			</p>
+		</blockquote>
+		<blockquote>
+			<p>
+				This is a mult-line blockquote with a cite reference. People think focus
+				means saying yes to the thing you’ve got to focus on. But that’s not
+				what it means at all. It means saying no to the hundred other good ideas
+				that there are. You have to pick carefully. I’m actually as proud of the
+				things we haven’tdone as the things I have done. Innovation is saying no
+				to 1,000 things. <cite>Steve Jobs – Apple Worldwide Developers’
+					Conference, 1997</cite>
+			</p>
+		</blockquote>
+	</section>
+	<hr />
+	<section>
+		<table>
+			<caption>Tables can have captions now.</caption>
+			<tbody>
+				<tr>
+					<th>Person</th>
+					<th>Number</th>
+					<th>Third Column</th>
+				</tr>
+				<tr>
+					<td>Someone Lastname</td>
+					<td>900</td>
+					<td>Nullam quis risus eget urna mollis ornare vel eu leo.</td>
+				</tr>
+				<tr>
+					<td><a href="#top">Person Name</a></td>
+					<td>1200</td>
+					<td>
+						Vestibulum id ligula porta felis euismod semper. Donec
+						ullamcorper nulla non metus auctor fringilla.
+					</td>
+				</tr>
+				<tr>
+					<td>Another Person</td>
+					<td>1500</td>
+					<td>
+						Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
+						auctor. Nullam id dolor id nibh ultricies vehicula ut id elit.
+					</td>
+				</tr>
+				<tr>
+					<td>Last One</td>
+					<td>2800</td>
+					<td>
+						Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+						Cras mattis consectetur purus sit amet fermentum.
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+	<hr />
+	<section>
+		<dl>
+			<dt>Definition List Title</dt>
+			<dd>Definition list division.</dd>
+			<dt>Kitchen Sink</dt>
+			<dd>
+				Used in expressions to describe work in which all conceivable (and some
+				inconceivable) sources have been mined. In this case, a bunch of markup.
+			</dd>
+			<dt>aside</dt>
+			<dd>Defines content aside from the page content</dd>
+			<dt>blockquote</dt>
+			<dd>Defines a section that is quoted from another source</dd>
+		</dl>
+	</section>
+	<hr />
+	<section>
+		<ul>
+			<li>
+				Unordered List item one
+				<ul>
+					<li>
+						Nested list item
+						<ul>
+							<li>Level 3, item one</li>
+							<li>Level 3, item two</li>
+							<li>Level 3, item three</li>
+							<li>Level 3, item four</li>
+						</ul>
+					</li>
+					<li>List item two</li>
+					<li>List item three</li>
+					<li>List item four</li>
+				</ul>
+			</li>
+			<li>List item two</li>
+			<li>List item three</li>
+			<li>List item four</li>
+		</ul>
+		<hr />
+		<ol>
+			<li>
+				List item one
+				<ol>
+					<li>
+						List item one
+						<ol>
+							<li>List item one</li>
+							<li>List item two</li>
+							<li>List item three</li>
+							<li>List item four</li>
+						</ol>
+					</li>
+					<li>List item two</li>
+					<li>List item three</li>
+					<li>List item four</li>
+				</ol>
+			</li>
+			<li>List item two</li>
+			<li>List item three</li>
+			<li>List item four</li>
+		</ol>
+	</section>
+	<hr />
+	<section>
+		<address>1 Infinite Loop<br /> Cupertino, CA 95014<br /> United States</address>
+	</section>
+	<hr />
+	<section>
+		<pre>
+		{`pre {
+			display: block;
+			padding: 7px;
+			background-color: #F5F5F5;
+			border: 1px solid #E1E1E8;
+			border-radius: 3px;
+			white-space: pre-wrap;
+			word-break: break-all;
+			font-family: Menlo, Monaco;
+			line-height: 160%;
+		}`}
+		</pre>
+	</section>
+	<hr />
 
-	<h3>
-		PARTNERSHIP ACTIVATIONS TO UTILIZE DIGNITAS’ NEW JERSEY BASED ESPORTS TRAINING
-		FACILITY
-	</h3>
-	<p style="text-align: left;">
-		<strong>NEWARK, NJ – AUGUST 17, 2020</strong>
-		: Dignitas, the esports vertical of New Meta Entertainment Inc. (NME), has today
-		announced an expanded partnership with Esports Entertainment Group’s VIE.gg. The
-		online exchange betting platform, VIE.gg, became an official multi-year partner
-		of Dignitas in June 2019 and in April 2020 became the first publicly traded
-		esports wagering company, listing its common shares on the NASDAQ, under the
-		symbol “GMBL”. Today marks an expansion of that partnership as VIE.gg secures
-		the naming rights of the organization’s famed CS:GO team.
-		<br />
-		<img
-			style="display: block; margin-left: auto; margin-right: auto;"
-			src="https://d1mt9jmphk9kik.cloudfront.net/teamdignitas/image1597636515.png"
-			width="519"
-			height="292"
-		/>
-	</p>
-	<p>
-		VIE.gg is the first and most transparent esports bet exchange as a result of
-		Esports Entertainment Group being a fully reporting SEC issuer in the United
-		States. Player safety features built into VIE.gg create a fun but responsible
-		esports betting experience for fans.
-	</p>
-	<p>
-		In addition to VIE.gg’s integration into the CS:GO naming rights and jersey, the
-		partners will roll out strategic digital and physical activations with the New
-		Jersey marketplace as a core focus. In June 2018, New Jersey Governor Phil
-		Murphy signed Assembly Bill 411, legalizing sports betting in New Jersey. One
-		year later, Dignitas became the first esports organization to open an esports
-		training facility in Newark, New Jersey, next to the famed sports and
-		entertainment facility, Prudential Center. In addition to U.S. sports betting,
-		the partnership also paves the way into the European marketplace through
-		association with Dignitas’ famed CS:GO team hailing from Scandinavia.
-	</p>
-	<p>
-		Esports Entertainment Group, a member of ESIC, is working together with NME, to
-		ensure that conflicts of interest and betting and age requirement rules are
-		withheld throughout.
-		<br />
-		<br />
-	</p>
-	<center>
-		<iframe
-			src="https://www.youtube.com/embed/CDGG_RFCdTg"
-			width="560"
-			height="315"
-			frameborder="0"
-			allowfullscreen="allowfullscreen"
-		/>
-	</center>
-	<p>
-		<br />
-		“We are honored to partner with an innovative, multinational brand like VIE.gg,”
-		said Michael Prindiville, CEO of New Meta Entertainment and Dignitas. “Our
-		co-branded CS:GO team and the immense opportunity around esports betting content
-		in our home state of New Jersey enable us to tell unique and engaging stories at
-		the forefront of both esports betting and competition to millions of fans
-		worldwide.”
-		<br />
-		<br />
-		“We are excited to further expand our partnership with Dignitas,” commented
-		Magnus Leppäniemi, VP of Marketing and Head of Esports at Esports Entertainment
-		Group. “As a committed long-term partner, we’re thrilled to have the opportunity
-		to co-brand our VIE.gg platform alongside Dignitas’ legendary CS:GO team, an
-		opportunity that can introduce our brand to millions of esports fans globally
-		and help establish our status as a Tier 1 operator within esports betting.”
-	</p>
-	<h4>ABOUT DIGNITAS:</h4>
+	<figure>
+		<img alt="" src="https://www.fillmurray.com/505/314" />
+		<figcaption>
+			Fig1. A picture of Bill Murray from <a href="https://www.fillmurray.com/">fillmurray.com</a>
+		</figcaption>
+	</figure>
 
-	<p>
-		Since its formation in 2003, Dignitas has established itself as one of the most
-		successful esports organizations in the world, amassing 18 World Championships
-		across multiple game titles. In September 2016, Dignitas was acquired by the
-		NBA’s Philadelphia 76ers of Harris Blitzer Sports &amp; Entertainment (HBSE), a
-		diverse, global portfolio of sports and entertainment franchises and properties
-		that includes the Philadelphia 76ers (NBA), New Jersey Devils (NHL) and more. In
-		June 2019, Dignitas merged with Fertitta Entertainment’s League of Legends LCS
-		franchise, Clutch Gaming, and through investment with Susquehanna International
-		Group and Delaware North, formed the parent company New Meta entertainment, Inc.
-		(NME), to expand the esports business into a broader digital sports and
-		entertainment company. Dignitas currently fields seven teams in five of esports'
-		largest and most popular games: League of Legends, Counter-Strike: Global
-		Offensive (men’s and women’s teams), Super Smash Bros., Rocket League, and Clash
-		Royale – as well as a host of digital influencers. With player content studios
-		and wellness facilities in Newark, NJ and Los Angeles, and infrastructure in
-		Europe and China, Dignitas is the global leader dedicated to esports athletes
-		and gaming entertainers.
-	</p>
+	<hr />
+	<section>
+		<form>
+			<p>
+				<label for="example-input-email">Email address</label>
+				<input
+					type="email"
+					id="example-input-email"
+					placeholder="Enter email"
+				/>
+			</p>
+			<p>
+				<label for="example-input-password1">Number</label>
+				<input type="number" id="example-input-number" placeholder="Number" />
+			</p>
+			<p>
+				<label for="example-input-password">Password</label>
+				<input
+					type="password"
+					id="example-input-password"
+					placeholder="Password"
+				/>
+			</p>
+			<p>
+				<label for="example-input-search">Search</label>
+				<input
+					type="search"
+					id="example-input-serach"
+					placeholder="Search .."
+				/>
+			</p>
+			<p>
+				<label for="example-input-tel">Telephone number</label>
+				<input
+					type="tel"
+					id="example-input-tel"
+					placeholder="Telephone number"
+				/>
+			</p>
 
-	<h4>ABOUT ESPORTS ENTERTAINMENT GROUP:</h4>
+			<p>
+				<label for="example-input-text">Text</label>
+				<input
+					type="text"
+					id="example-input-text"
+					placeholder="Enter some text here"
+				/>
+			</p>
+			<p>
+				<label for="example-input-url">Url</label>
+				<input
+					type="url"
+					id="example-input-url"
+					placeholder="Enter a url here"
+				/>
+			</p>
+			<p>
+				<label for="example-input-color">Color</label>
+				<input type="color" id="example-inupt-color" placeholder="#fff" />
+			</p>
+			<p>
+				<label for="example-input-date">Date</label>
+				<input type="date" id="example-input-date" placeholder="date" />
+			</p>
+			<p>
+				<label for="example-input-date-time">Date / Time</label>
+				<input
+					type="datetime"
+					id="example-input-date-time"
+					placeholder="date / time"
+				/>
+			</p>
+			<p>
+				<label for="example-input-date-time-local">Date / Time local</label>
+				<input
+					type="datetime-local"
+					id="example-input-date-time-local"
+					placeholder="date / time local"
+				/>
+			</p>
+			<p>
+				<label for="example-input-month">Month</label>
+				<input type="month" id="example-input-month" placeholder="Month" />
+			</p>
+			<p>
+				<label for="example-input-week">Week</label>
+				<input type="week" id="example-input-week" placeholder="Week" />
+			</p>
+			<p>
+				<label for="example-input-time">Time</label>
+				<input type="time" id="example-input-time" placeholder="Time" />
+			</p>
+			<p>
+				<label for="example-select1">Example select</label>
+				<select id="example-select1">
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+				</select>
+			</p>
+			<p>
+				<label for="example-select2">Example multiple select</label>
+				<select multiple id="example-select2">
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+				</select>
+			</p>
+			<p>
+				<label for="example-textarea">Example textarea</label>
+				<textarea id="example-textarea" rows="3" />
+			</p>
+			<p>
+				<label for="example-input-file">File input</label>
+				<input type="file" id="example-input-file" />
+			</p>
+			<fieldset>
+				<legend>I am legend</legend>
+				<div>
+					<label>
+						<input
+							type="radio"
+							name="options-radios"
+							id="optionsR-radios1"
+							value="option1"
+							checked
+						/> Option one is this and that&mdash;be sure to include why it's
+						great
+					</label>
+				</div>
 
-	<p>
-		Esports Entertainment Group, Inc. is a licensed online gambling company with a
-		specific focus on esports wagering and 18+ gaming. The Company holds a license
-		to conduct online gambling and 18+ gaming on a global basis in Malta and
-		Curacao, Kingdom of the Netherlands and is able to accept wagers from over 149
-		jurisdictions including Canada, Japan, Germany and South Africa. Esports
-		Entertainment offers fantasy, pools, fixed odds and exchange style wagering on
-		esports events in a licensed, regulated and secure platform to the global
-		esports audience at vie.gg. In addition, Esports Entertainment intends to offer
-		users from around the world the ability to participate in multi-player mobile
-		and PC video game tournaments for cash prizes. Esports Entertainment is led by a
-		team of industry professionals and technical experts from the online gambling
-		and the video game industries, and esports. The Company maintains offices in
-		Malta. For more information visit
-		<a href=".">www.esportsentertainmentgroup.com</a>
-		.
-	</p>
-</article>
+				<div>
+					<label>
+						<input
+							type="radio"
+							name="options-radios"
+							id="options-radios2"
+							value="option2"
+						/> Option two can be something else and selecting it will deselect
+						option one
+					</label>
+				</div>
+				<div>
+					<label>
+						<input
+							type="radio"
+							name="optionsRadios"
+							id="options-radios3"
+							value="option3"
+							disabled
+						/> Option three is disabled
+					</label>
+				</div>
+			</fieldset>
+
+			<fieldset>
+				<legend>I am also legend</legend>
+				<input type="checkbox" /> Check me out <input type="checkbox" /> Or check
+				me out
+			</fieldset>
+			<p>
+				<button type="button" name="button">Button</button>
+				<input type="button" name="input" value="Input Button" />
+				<input type="submit" name="submit" value="Submit Button" />
+				<input type="reset" name="reset" value="Reset Button" />
+			</p>
+		</form>
+	</section>
+</main>
+<!-- end kitchen sink -->
