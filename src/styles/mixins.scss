@@ -1,89 +1,59 @@
+@mixin LightTheme($lightTheme: false) {
+	@if $lightTheme {
+		// LEVELS
+		--theme-background: var(--color-monotone-80);
+		--theme-lvl1-fill: var(--color-monotone-85);
+		--theme-lvl1-border: var(--color-monotone-90);
+		--theme-lvl2-fill: var(--color-monotone-95);
+		--theme-lvl2-border: var(--color-monotone-100);
+
+		// TEXT
+		--theme-text-title: var(--color-monotone-0);
+		--theme-text-content: var(--color-monotone-10);
+		--theme-text-sub: var(--color-monotone-20);
+
+		// LINK
+		--theme-text-title: var(--color-monotone-0);
+		--theme-text-content: var(--color-monotone-10);
+		--theme-text-sub: var(--color-monotone-20);
+
+		// ACCENT
+		--theme-link-resting: var(--color-accent-40);
+		--theme-link-hover: var(--color-accent-50);
+
+		--theme-interactive-resting: var(--color-accent-60);
+		--theme-interactive-hover: var(--color-accent-70);
+		--theme-interactive-content: var(--color-accent-0);
+		--theme-interactive-sub: var(--color-accent-10);
+	} @else {
+		// LEVELS
+		--theme-background: var(--color-monotone-0);
+		--theme-lvl1-fill: var(--color-monotone-5);
+		--theme-lvl1-border: var(--color-monotone-10);
+		--theme-lvl2-fill: var(--color-monotone-15);
+		--theme-lvl2-border: var(--color-monotone-20);
+
+		// TEXT
+		--theme-text-title: var(--color-monotone-100);
+		--theme-text-content: var(--color-monotone-85);
+		--theme-text-sub: var(--color-monotone-70);
+
+		// ACCENT
+		--theme-link-resting: var(--color-accent-50);
+		--theme-link-hover: var(--color-accent-60);
+
+		--theme-interactive-resting: var(--color-accent-20);
+		--theme-interactive-hover: var(--color-accent-30);
+		--theme-interactive-content: var(--color-accent-90);
+		--theme-interactive-sub: var(--color-accent-70);
+	}
+}
+
 //	==========
 //	UTILITY
 //	==========
-@mixin Constrain($width: 960px) {
-	width: 100%;
-	height: auto;
-	max-width: $width;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-//	==========
-//	TYPOGRAPHY
-//	==========
-@mixin textStyle($size: 1.6rem, $weight: 400, $kern: -0.01em) {
-	margin-top: var(--size-xxs) * 0.5em;
-	margin-bottom: var(--size-xxs) * 0.5em;
-	font-size: $size;
-	line-height: calc($size + var(--size-xxs) + 0.5em);
-	letter-spacing: $kern;
-	font-weight: $weight;
-}
-
-@mixin textSpace($space: 0) {
-	margin-top: $space * 1em;
-	margin-bottom: $space * 1em;
-	&:first-child {
-		margin-top: 0;
-	}
-	&:last-child {
-		margin-bottom: 0;
-	}
-}
-
-@mixin Hero($space: 0) {
-	font-size: 4.8rem;
-	line-height: 4.8rem;
-	letter-spacing: -0.01em;
-
-	font-weight: var(--font-weight-bold);
-	@include textSpace($space);
-}
-@mixin Title($space: 0) {
-	font-size: 3.2rem;
-	line-height: 4rem;
-	letter-spacing: -0.01em;
-
-	font-weight: var(--font-weight-bold);
-	@include textSpace($space);
-}
-@mixin Subtitle($space: 0) {
-	font-size: 2.4rem;
-	line-height: 3.2rem;
-	letter-spacing: -0.01em;
-
-	font-weight: var(--font-weight-regular);
-	@include textSpace($space);
-}
-@mixin Heading($space: 0) {
-	font-size: 2rem;
-	line-height: 2.8rem;
-	letter-spacing: -0.01em;
-
-	font-weight: var(--font-weight-bold);
-	@include textSpace($space);
-}
-@mixin Content($space: 0) {
-	font-size: 2rem;
-	line-height: 2.8rem;
-	letter-spacing: 0.005em;
-
-	font-weight: var(--font-weight-regular);
-	@include textSpace($space);
-}
-@mixin Label($space: 0) {
-	font-size: 1.6rem;
-	line-height: 2.8rem;
-	letter-spacing: 0.1em;
-
-	text-transform: uppercase;
-	font-weight: var(--font-weight-bold);
-	@include textSpace($space);
-}
-
-@mixin AltFont() {
-	font-family: "Comic Sans";
-	--font-weight-regular: 400;
-	--font-weight-bold: 800;
+@mixin Constrain() {
+	//max-width: var(--container-content);
+	//margin-left: auto;
+	//margin-right: auto;
 }

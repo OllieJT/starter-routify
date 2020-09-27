@@ -4,9 +4,7 @@
 </script>
 
 <style global lang="scss">
-	@import "./styles/mixins.scss";
-	@import "./styles/reset.scss";
-	@import "./styles/global.scss";
+	@import "./styles/main.scss";
 </style>
 
 <Router {routes} />

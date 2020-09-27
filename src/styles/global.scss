@@ -1,4 +1,5 @@
 // global.scss
+@import "./reset.scss";
 
 :root {
 	--color-primary-high: hsl(52, 100%, 75%);
@@ -10,18 +11,8 @@
 	--color-content-middle: hsl(200, 8%, 68%);
 	--color-content-low: hsl(200, 8%, 56%);
 
-	--color-level-higher: hsl(200, 8%, 40%);
-	--color-level-high: hsl(200, 8%, 24%);
-	--color-level-middle: hsl(200, 8%, 16%);
-	--color-level-low: hsl(200, 8%, 12%);
-	--color-level-lower: hsl(200, 8%, 6%);
-	--color-level-bottom: hsl(200, 8%, 2%);
-	--color-level-mask: hsla(200, 8%, 2%, 0.4);
-
 	--container-main: 120rem;
 	--container-content: 88rem;
-
-	--container-gutter: 0.8rem;
 
 	--size-xxs: 0.4rem;
 	--size-xs: 0.8rem;
@@ -31,7 +22,7 @@
 	--size-xl: 8rem;
 	--size-xxl: 16rem;
 
-	--radius-small: var(--size-xxs);
+	--radius-small: var(--size-xs);
 	--radius-medium: var(--size-s);
 	--radius-large: var(--size-l);
 
@@ -39,11 +30,45 @@
 	--transition-secondary: cubic-bezier(0.5, 2, 0.5, 0.75); // Bouncy
 
 	--font-weight-regular: 400;
-	--font-weight-bold: 800;
+	--font-weight-bold: 500;
+
+	--color-accent-0: hsl(8, 100%, 0%);
+	--color-accent-10: hsl(8, 100%, 10%);
+	--color-accent-20: hsl(8, 100%, 20%);
+	--color-accent-30: hsl(8, 100%, 30%);
+	--color-accent-40: hsl(8, 100%, 40%);
+	--color-accent-50: hsl(8, 100%, 50%);
+	--color-accent-60: hsl(8, 100%, 65%);
+	--color-accent-70: hsl(8, 100%, 70%);
+	--color-accent-80: hsl(8, 100%, 75%);
+	--color-accent-90: hsl(8, 100%, 85%);
+	--color-accent-100: hsl(8, 100%, 95%);
+
+	--color-monotone-0: hsl(0, 0%, 0%);
+	--color-monotone-5: hsl(0, 0%, 5%);
+	--color-monotone-10: hsl(0, 0%, 10%);
+	--color-monotone-15: hsl(0, 0%, 15%);
+	--color-monotone-20: hsl(0, 0%, 20%);
+	--color-monotone-25: hsl(0, 0%, 25%);
+	--color-monotone-30: hsl(0, 0%, 30%);
+	--color-monotone-35: hsl(0, 0%, 35%);
+	--color-monotone-40: hsl(0, 0%, 40%);
+	--color-monotone-45: hsl(0, 0%, 45%);
+	--color-monotone-50: hsl(0, 0%, 50%);
+	--color-monotone-55: hsl(0, 0%, 55%);
+	--color-monotone-60: hsl(0, 0%, 60%);
+	--color-monotone-65: hsl(0, 0%, 65%);
+	--color-monotone-70: hsl(0, 0%, 70%);
+	--color-monotone-75: hsl(0, 0%, 75%);
+	--color-monotone-80: hsl(0, 0%, 80%);
+	--color-monotone-85: hsl(0, 0%, 85%);
+	--color-monotone-90: hsl(0, 0%, 90%);
+	--color-monotone-95: hsl(0, 0%, 95%);
+	--color-monotone-100: hsl(0, 0%, 100%);
 }
 
 html {
-	//font-size: 62.5% !important;
+	font-size: 62.5% !important;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	-webkit-text-size-adjust: 100%;
@@ -54,59 +79,38 @@ html {
 }
 
 body {
-	font-family: Helvetica, Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI",
-		Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+	@include LightTheme(false);
+	&.theme-light {
+		@include LightTheme(true);
+	}
+
+	font-family: "Tomorrow", Helvetica, Avenir, -apple-system, BlinkMacSystemFont,
+		"Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+		sans-serif;
 	font-style: normal;
-	@include Content;
-	background-color: rgb(200, 200, 200);
+	font-weight: var(--font-weight-regular);
+	font-size: 1.6rem;
+	line-height: 1em;
+	background-color: var(--theme-background);
+	color: var(--theme-text-content);
 
-	.alt-font {
-		@include AltFont;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	justify-content: stretch;
+
+	#site-wrapper {
+		width: 100%;
+		height: auto;
+		min-height: 100%;
+
+		flex-grow: 1;
+
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
+		justify-content: stretch;
 	}
-}
-a {
-	display: inline-block;
-	text-decoration: none;
-	cursor: pointer;
-	color: var(--color-theme-middle);
-	transition: color 0.16s ease-out;
-
-	&:hover,
-	&:focus {
-		color: var(--color-theme-high);
-	}
-}
-
-h1,
-.txt-hero {
-	@include Hero;
-}
-h2,
-.txt-title {
-	@include Title;
-}
-h3,
-.txt-subtitle {
-	@include Subtitle;
-}
-h4,
-h5,
-.txt-heading {
-	@include Heading;
-}
-h6,
-.txt-label {
-	@include Label;
-}
-p,
-ol,
-ul,
-blockquote,
-input,
-select,
-textarea,
-.txt-content {
-	@include Content;
 }
 
 img.icon {
@@ -115,177 +119,49 @@ img.icon {
 	display: inline-block;
 }
 
-blockquote {
-	padding: var(--size-s);
-	background-color: var(--color-level-lower);
-	border: 1px solid var(--color-level-low);
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-	&:first-child {
-		margin-top: 0;
-	}
-	&:last-child {
-		margin-bottom: 0;
-	}
-
-	&.alt-font {
-		@include AltFont;
-	}
-
-	svg {
-		font-size: 1.25em;
-		margin: auto 0;
-	}
-
-	strong,
-	b {
-		font-weight: bolder;
-	}
-
-	sub,
-	sup,
-	small {
-		//. Specified in % so that the sup/sup is the right size relative to the surrounding text
-		font-size: 75%;
-
-		// Zero out the line-height so that it doesn't interfere with the positioning that follows */
-		line-height: 0;
-
-		// Where the magic happens: makes all browsers position the sup/sup properly, relative to the surrounding text */
-		position: relative;
-
-		// Note that if you're using Eric Meyer's reset.css, this is already set and you can remove this rule
-		vertical-align: baseline;
-	}
-	sub {
-		// Move the subscripted text down, but only half as far down as the superscript moved up
-		bottom: -0.25em;
-	}
-	sup {
-		// Move the superscripted text up
-		top: -0.5em;
-	}
-	small {
-		font-size: 85%;
-	}
-
-	mark {
-		display: inline;
-		color: var(--color-theme-high);
-		background-color: var(--color-theme-mask);
-		padding: 0 var(--size-xxs);
-		border-radius: var(--radius-small);
-	}
-	code {
-		font-style: italic;
-		color: var(--color-content-high);
-		background-color: var(--color-level-low);
-		padding: 0 0.2em;
-		font-size: 0.8em;
-		line-height: 1em;
-		padding: 0.3em;
-		border-radius: 0.25em;
-		font-weight: bolder;
-	}
-
-	em {
-		font-style: italic;
-		font-style: oblique;
-	}
-	u {
-		text-decoration: underline;
-	}
-	i {
-		font-style: italic;
-	}
-}
-
-.svg-icon {
-	width: 1em;
+img.emoji {
 	height: 1em;
-
-	display: inline-block;
-	fill: currentColor;
+	width: 1.2em;
+	margin: 0 0.05em 0 0.1em;
+	vertical-align: -0.1em;
 }
 
-.blocks__container {
-	padding: var(--size-xxs);
-	@media (max-width: 600px) {
-		padding: var(--size-xs);
-	}
+a {
+	text-decoration: none;
+	cursor: pointer;
+	transition: all 0.08s ease;
+}
 
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6,
-	p,
-	blockquote,
+ol,
+ol li {
+	list-style: decimal;
+}
+
+ul,
+ul li {
+	list-style: disc;
+}
+
+ul,
+ol {
+	@include Constrain();
 	ul,
-	ol,
-	.RICHTEXT__CONSTRAINED {
-		max-width: 880px;
-		margin-left: auto;
-		margin-right: auto;
+	ol {
+		padding-left: 1em;
 	}
 
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6 {
-		text-transform: capitalize;
-		margin-top: 0.66em;
-		margin-bottom: 0.66em;
-	}
-	p {
-		margin-top: 1em;
-		margin-bottom: 1em;
-	}
-
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6,
-	p {
-		&:first-child {
-			margin-top: 0;
-		}
-		&:last-child {
-			margin-bottom: 0;
-		}
-	}
-
-	/* ulli),
-	olli){
-		list-style-position: inside;
-	} */
-
-	ol,
 	li {
-		list-style: decimal;
 		list-style-position: inside;
 	}
-
-	ul,
-	li {
-		list-style: disc;
-		list-style-position: inside;
-	}
-
-	a {
-		display: inline;
-		text-decoration: underline;
+	&.reset,
+	&.reset ul,
+	&.reset ol,
+	&.reset li {
+		max-width: none;
+		list-style: none !important;
+		ul,
+		ol {
+			padding-left: 0 !important;
+		}
 	}
 }
