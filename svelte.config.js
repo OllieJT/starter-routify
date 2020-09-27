@@ -1,16 +1,8 @@
-const autoPreprocess = require('svelte-preprocess')
-const autoprefixer = require('autoprefixer')
-const postcssImport = require('postcss-import')
+const sveltePreprocess = require("svelte-preprocess");
 
 module.exports = {
-	preprocess: autoPreprocess({
-        postcss: {
-			plugins: [postcssImport(),autoprefixer()]
-		},
-		defaults: { style: 'postcss' },
-
-		scss: {
-			includePaths: ['src'],
-		},
-	}),
-}
+	dev: true,
+	preprocess: sveltePreprocess({
+		sourceMap: true
+	})
+};

@@ -1,7 +1,6 @@
 import { createRollupConfigs } from "./scripts/base.config.js";
-const autoPreprocess = require("svelte-preprocess");
-const autoprefixer = require("autoprefixer");
-const postcssImport = require("postcss-import");
+
+const sveltePreprocess = require("svelte-preprocess");
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -13,12 +12,10 @@ export const config = {
 	production,
 	rollupWrapper: (rollup) => rollup,
 	svelteWrapper: (svelte) => {
-		svelte.preprocess = [
-			autoPreprocess({
-				postcss: { plugins: [postcssImport(), autoprefixer()] },
-				defaults: { style: "postcss" }
-			})
-		];
+		svelte.preprocess = sveltePreprocess({
+			sourceMap: true
+		});
+		return svelte;
 	},
 	swWrapper: (worker) => worker
 };
